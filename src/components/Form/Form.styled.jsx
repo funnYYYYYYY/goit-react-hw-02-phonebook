@@ -17,8 +17,10 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
+  display: block;
   height: 25px;
   font-size: 18px;
+  margin-top: 5px;
 
   &:focus {
     outline: none;

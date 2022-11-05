@@ -56,10 +56,7 @@ export class App extends Component {
       <div
         style={{
           height: '100vh',
-          // display: 'flex',
-          // justifyContent: 'center',
-          // alignItems: 'center',
-          // fontSize: 40,
+          padding: '20px',
           color: '#010101',
         }}
       >
