@@ -1,12 +1,14 @@
+import { Button } from 'components/Form/Form.styled';
+
 export const ContactListItem = ({ contact, deleteContact }) => {
   return (
     <li>
       <p>
         {contact.name}:{contact.number}
       </p>
-      <button type="button" onClick={() => deleteContact(contact.id)}>
+      <Button type="button" onClick={() => deleteContact(contact.id)}>
         Delete
-      </button>
+      </Button>
     </li>
   );
 };

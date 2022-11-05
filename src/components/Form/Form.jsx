@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Label, Input } from './Form.styled';
+import { Container, Label, Input, Button } from './Form.styled';
 
 class Form extends Component {
   state = {
@@ -56,7 +56,7 @@ class Form extends Component {
             required
           />
         </Label>
-        <button type="submit">Add contact</button>
+        <Button type="submit">Add contact</Button>
       </Container>
     );
   }

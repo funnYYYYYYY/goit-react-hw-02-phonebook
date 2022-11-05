@@ -4,6 +4,7 @@ import { Form } from './Form/Form';
 import { ContactsList } from './contactsBook/Contacts';
 import shortid from 'shortid';
 import { Filter } from './Filter/Filter';
+import { Section } from './Section/Section';
 
 export class App extends Component {
   state = {
@@ -55,19 +56,23 @@ export class App extends Component {
       <div
         style={{
           height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
+          // display: 'flex',
+          // justifyContent: 'center',
+          // alignItems: 'center',
+          // fontSize: 40,
           color: '#010101',
         }}
       >
-        <Form onSubmit={this.formSubmitHandler} />
-        <Filter value={this.state.filter} onChange={this.changeFilter} />
-        <ContactsList
-          deleteContact={this.handleDeleteContact}
-          contacts={visibleContacts}
-        />
+        <Section title="PhoneBook">
+          <Form onSubmit={this.formSubmitHandler} />
+        </Section>
+        <Section title="Contacts">
+          <Filter value={this.state.filter} onChange={this.changeFilter} />
+          <ContactsList
+            deleteContact={this.handleDeleteContact}
+            contacts={visibleContacts}
+          />
+        </Section>
       </div>
     );
   }
