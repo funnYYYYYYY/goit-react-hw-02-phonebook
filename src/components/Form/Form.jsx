@@ -16,7 +16,14 @@ class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state.number);
+
+    // if (e.currentTarget.number.value === this.state.number) {
+    //   alert(`${this.state.number} is already in contacts`);
+    // } else {
+    //   this.props.onSubmit(this.state);
+    //   this.reset();
+    // }
+
     this.props.onSubmit(this.state);
     this.reset();
   };
