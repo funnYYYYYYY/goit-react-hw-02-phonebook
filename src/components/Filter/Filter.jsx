@@ -1,4 +1,5 @@
 import { Label, Input } from 'components/Form/Form.styled';
+import PropTypes from 'prop-types';
 
 export const Filter = ({ value, onChange }) => {
   return (
@@ -7,4 +8,9 @@ export const Filter = ({ value, onChange }) => {
       <Input type="text" value={value} onChange={onChange} />
     </Label>
   );
+};
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
